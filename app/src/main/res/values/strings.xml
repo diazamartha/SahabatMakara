@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">SahabatMakara</string>
+    <string name="label_home_navigation_bar">Home</string>
+    <string name="label_places_navigation_bar">Places</string>
+    <string name="label_about_me_navigation_bar">About Me</string>
+    <string name="label_fmipa">FMIPA</string>
+    <string name="label_fasilkom">FASILKOM</string>
+    <string name="label_farmasi">FF</string>
+    <string name="label_fe">FEB</string>
+    <string name="label_fh">FH</string>
+    <string name="label_fia">FIA</string>
+    <string name="label_fib">FIB</string>
+    <string name="label_fik">FIK</string>
+    <string name="label_fisip">FISIP</string>
+    <string name="label_fk">FK</string>
+    <string name="label_fkg">FKG</string>
+    <string name="label_fkm">FKM</string>
+    <string name="label_fpsi">FPsi</string>
+    <string name="label_ft">FT</string>
+    <string name="label_vokasi">Vokasi</string>
+    <string name="label_fmipa_bar">Fakultas MIPA</string>
+
+    <string name="label_geologi">Geologi</string>
+    <string name="label_dept_geosains">Departemen Geosains</string>
+
+    <string name="hint_find_major">Cari jurusan</string>
 </resources>
