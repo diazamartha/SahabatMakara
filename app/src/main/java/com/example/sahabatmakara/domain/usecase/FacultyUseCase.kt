@@ -6,4 +6,6 @@ import kotlinx.coroutines.flow.Flow
 interface FacultyUseCase {
 
     fun getFmipaMajor(): Flow<List<FmipaMajor>>
+
+    fun getDetailFmipaMajor(major: String): Flow<FmipaMajor>
 }

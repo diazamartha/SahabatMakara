@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">SahabatMakara</string>
+    <string name="label_name">Diaz Amartha</string>
+    <string name="label_university">University</string>
+    <string name="label_university_name">University of Indonesia</string>
+    <string name="label_major">Major</string>
     <string name="label_home_navigation_bar">Home</string>
     <string name="label_places_navigation_bar">Places</string>
     <string name="label_about_me_navigation_bar">About Me</string>
@@ -19,9 +23,13 @@
     <string name="label_ft">FT</string>
     <string name="label_vokasi">Vokasi</string>
     <string name="label_fmipa_bar">Fakultas MIPA</string>
-
-    <string name="label_geologi">Geologi</string>
+    <string name="label_dept">Department</string>
+    <string name="label_faculty">Faculty</string>
+    <string name="label_email">diazamar99@gmail.com</string>
+    <string name="label_geologi">Geology</string>
     <string name="label_dept_geosains">Departemen Geosains</string>
 
     <string name="hint_find_major">Cari jurusan</string>
+
+    <string name="action_close">Tutup</string>
 </resources>

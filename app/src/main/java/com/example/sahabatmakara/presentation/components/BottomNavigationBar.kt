@@ -26,9 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -75,12 +73,12 @@ fun BottomNavigationBar(
             iconModifier = Modifier.size(36.dp)
         )
         BottomNavigationBarItem(
-            isSelected = currentRoute == Screen.Home.route,
+            isSelected = currentRoute == Screen.Places.route,
             icon = Icons.Default.Place,
             label = stringResource(R.string.label_places_navigation_bar),
             onClick = {
                 navController.navigate(Screen.Places.route) {
-                    popUpTo(Screen.Places.route) {
+                    popUpTo(Screen.Home.route) {
                         saveState = true
                     }
                     restoreState = true
@@ -91,12 +89,12 @@ fun BottomNavigationBar(
             iconModifier = Modifier.size(36.dp)
         )
         BottomNavigationBarItem(
-            isSelected = currentRoute == Screen.Home.route,
+            isSelected = currentRoute == Screen.AboutMe.route,
             icon = Icons.Default.AccountCircle,
             label = stringResource(R.string.label_about_me_navigation_bar),
             onClick = {
-                navController.navigate(Screen.Places.route) {
-                    popUpTo(Screen.Places.route) {
+                navController.navigate(Screen.AboutMe.route) {
+                    popUpTo(Screen.Home.route) {
                         saveState = true
                     }
                     restoreState = true
@@ -122,7 +120,7 @@ fun BottomNavigationBarItem(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween,
         modifier = modifier
-            .heightIn(min = 48.dp)
+            .heightIn(min = 32.dp)
             .clip(RoundedCornerShape(8.dp))
             .clickable { onClick() }
             .padding(4.dp)
@@ -136,7 +134,7 @@ fun BottomNavigationBarItem(
         Text(
             text = label,
             style = MaterialTheme.typography.bodyMedium.copy(
-                color = if (isSelected) Yellow80 else Yellow80
+                color = if (isSelected) Color.Black else Color.LightGray
             )
         )
     }

@@ -18,9 +18,10 @@ import com.example.sahabatmakara.di.facultyModule
 import com.example.sahabatmakara.di.viewModelModule
 import com.example.sahabatmakara.presentation.components.BottomNavigationBar
 import com.example.sahabatmakara.presentation.navigation.Screen
+import com.example.sahabatmakara.presentation.screen.PlacesScreen
+import com.example.sahabatmakara.presentation.screen.aboutme.AboutMeScreen
 import com.example.sahabatmakara.presentation.screen.detailfaculty.fmipa.FmipaScreen
 import com.example.sahabatmakara.presentation.screen.home.HomeScreen
-import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 
@@ -62,10 +63,10 @@ fun SahabatMakaraApp(
                 HomeScreen(navController = navController)
             }
             composable(Screen.Places.route) {
-
+                PlacesScreen()
             }
             composable(Screen.AboutMe.route) {
-
+                AboutMeScreen(navCotroller = navController)
             }
             composable(Screen.Fmipa.route) {
                 FmipaScreen(navController = navController)

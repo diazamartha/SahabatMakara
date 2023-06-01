@@ -21,14 +21,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.sahabatmakara.R
 import com.example.sahabatmakara.domain.model.FmipaMajor
-import com.example.sahabatmakara.ui.theme.SahabatMakaraTheme
+import com.example.sahabatmakara.presentation.screen.detailfaculty.fmipa.FmipaViewModel
 import com.example.sahabatmakara.ui.theme.Yellow80
+import org.koin.androidx.compose.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,8 +35,13 @@ fun MajorItem(
     major: String,
     dept: String,
     modifier: Modifier = Modifier,
+    fmipaViewModel: FmipaViewModel = koinViewModel(),
+    fmipaMajor: FmipaMajor,
 ) {
     Card(
+        onClick = {
+            fmipaViewModel.onItemClick(fmipaMajor.major)
+        },
         modifier = Modifier
             .padding(vertical = 6.dp, horizontal = 16.dp)
             .clickable { },
@@ -84,14 +87,3 @@ fun MajorItem(
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun EmployeesItemPreview() {
-    SahabatMakaraTheme() {
-        MajorItem(
-            R.drawable.ic_geologi,
-            stringResource(R.string.label_geologi),
-            stringResource(R.string.label_dept_geosains)
-        )
-    }
-}
